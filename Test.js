@@ -1,5 +1,5 @@
 let whiteGuy = {
-  name: "Whitcher",
+  name: "Litzar'",
   damage: 3,
   armor: 0.1,
   strenght: 3,
