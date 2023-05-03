@@ -1,0 +1,108 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.background-image
+{
+    width: 720px;
+    height: 512px;
+    background-image: url('./assets/img/cave.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.hero{
+    width: 400px;
+    height: 185px;
+    /* background-image: url(./assets/img/white_Hair.png); */
+    background-repeat: no-repeat;
+    background-size: 3200px;
+    background-position: 0px -2900px;
+    position: absolute;
+    top: 250px;
+    left: 300px;
+    transition: transform 1s ;
+}
+#heroStats{
+    width: 200px;
+    height: 180px;
+    background-color: rgb(2 67 146 / 30%);
+    color: white;
+    border: 3px solid white;
+    position: absolute;
+    top: 215px;
+    border-radius: 10px;
+    
+}
+.enemy{
+    /* background-image: url(./assets/img/archer_skilet.png); */
+    position: absolute;
+    top: 240px;
+    left: 640px;
+    transition: transform 0.5s;
+    width: 120px;
+    height: 140px;
+    background-repeat: no-repeat;
+    background-size: 1800px;
+    background-position: 0px -2505px;
+    display: none;
+}
+#enemyStats{
+    width: 200px;
+    height: 215px;
+    background-color: rgb(2 67 146 / 30%);
+    color: white;
+    border: 3px solid white;
+    position: absolute;
+    top: 0;
+    right: 1px;
+    border-radius: 30px;
+    display: none;
+}
+#heroDamage{
+    width: 100px;
+    height: 20px;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    align-items: center;
+    z-index: 2;
+    top: 475px;
+    left: 560px;
+    display: none;
+}
+#enemyDamage{
+    position: absolute;
+    left: 730px;
+    top: 220px;
+    width: 100px;
+    height: 20px;
+    color: white;
+    font-weight: bold;
+    align-items: center;
+    display: none;
+}
+.buttons-container{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(2 67 146 / 30%);
+    border-radius: 10px;
+    border: 3px solid white;
+    display: flex;
+    justify-content: space-between;
+    width: max-content;
+    position: absolute;
+    top: 440px;
+    padding: 10px 10px;
+    height: 40px;
+}
+.button{
+    width: 150px;
+    height: 30px;
+    background-color: cornflowerblue;
+    color: white;
+}
+#hero-attack{
+    display: none;
+}
+
