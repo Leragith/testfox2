@@ -3,45 +3,57 @@ body{
     padding: 0;
 }
 
-.background-image
-{
+.background-container{
+    width: 100%;
+    height: 120%;
+    background-color: black;
+    display: flex;
+}
+
+.background-image{
+    margin: auto;
     width: 720px;
     height: 512px;
-    background-image: url('./assets/img/cave.png');
+    background-image: url('./assets/img/mountains.png');
     background-repeat: no-repeat;
     background-size: 100%;
+    display: flex;
+    flex-flow: row wrap;
 }
 .hero{
     width: 400px;
     height: 185px;
-    /* background-image: url(./assets/img/white_Hair.png); */
     background-repeat: no-repeat;
     background-size: 3200px;
     background-position: 0px -2900px;
     position: absolute;
     top: 250px;
-    left: 300px;
+    left: auto;
+    margin-left: 150px;
     transition: transform 1s ;
 }
 #heroStats{
     width: 200px;
-    height: 180px;
-    background-color: rgb(2 67 146 / 30%);
+    height: 108px;
+    background-color: rgb(62 64 92 / 30%);
     color: white;
     border: 3px solid white;
     position: absolute;
-    top: 215px;
+    top: 0;
+    left: auto;
     border-radius: 10px;
     
 }
 .enemy{
-    /* background-image: url(./assets/img/archer_skilet.png); */
     position: absolute;
-    top: 240px;
-    left: 640px;
+    top: auto;
+    margin-left: 400px;
+    margin-top: 270px;
     transition: transform 0.5s;
     width: 120px;
     height: 140px;
+    left: auto;
+    right: auto;
     background-repeat: no-repeat;
     background-size: 1800px;
     background-position: 0px -2505px;
@@ -49,14 +61,15 @@ body{
 }
 #enemyStats{
     width: 200px;
-    height: 215px;
-    background-color: rgb(2 67 146 / 30%);
+    height: 108px;
+    background-color: rgb(62 64 92 / 30%);
     color: white;
     border: 3px solid white;
     position: absolute;
+    margin-left: 510px;
     top: 0;
-    right: 1px;
-    border-radius: 30px;
+    right: auto;
+    border-radius: 10px;
     display: none;
 }
 #heroDamage{
@@ -67,7 +80,7 @@ body{
     position: absolute;
     align-items: center;
     z-index: 2;
-    top: 475px;
+    top: 475px;               
     left: 560px;
     display: none;
 }
@@ -83,17 +96,14 @@ body{
     display: none;
 }
 .buttons-container{
-    display: flex;
-    justify-content: space-between;
-    background-color: rgb(2 67 146 / 30%);
+    background-color: rgb(62 64 92 / 30%);
     border-radius: 10px;
     border: 3px solid white;
-    display: flex;
-    justify-content: space-between;
     width: max-content;
     position: absolute;
     top: 440px;
-    padding: 10px 10px;
+    padding: 10px 10px 0 10px;
+    margin-left: 270px;
     height: 40px;
 }
 .button{
