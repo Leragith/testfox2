@@ -1,15 +1,15 @@
 let knight = {  
-  name: "Litzar'",
+  name: "Рыцарь",
   damage: 30,
-  armor: 1,
+  armor: 15,
   health: 100,
-  imageUlr:"./assets/img/teeeeest.png"
+  imageUlr:"./assets/img/knight.png"
 };
 
 let slime = { 
-  name: "SlimeUwU",
-  damage: 10,
-  armor: 2,
+  name: "СлаймUwU",
+  damage: 40,
+  armor: 1,
   health: 100,
   imageUlr:"./assets/img/slimes.png"
 };
@@ -31,30 +31,30 @@ window.onload = function () {
 
   function endGame() {
     alert("Потрачено!");
-    knight.health = maxHealth; 
+    hero.health = maxHealth;
     location.reload();
-    updateStats();
+    updateStats(); 
   }
 
   function updateStats() {
     if (hero.health <= 0) {
       endGame();
     } else {
-      document.getElementById("nameHero").innerHTML = "name - " + hero.name;
-      document.getElementById("damageHero").innerHTML = "damage - " + hero.damage;
-      document.getElementById("armorHero").innerHTML = "armor - " + hero.armor;
-      document.getElementById("healthHero").innerHTML = "health - " + hero.health;
+      document.getElementById("nameHero").innerHTML = "имя - " + hero.name;
+      document.getElementById("damageHero").innerHTML = "урон - " + hero.damage;
+      document.getElementById("armorHero").innerHTML = "броня - " + hero.armor;
+      document.getElementById("healthHero").innerHTML = "здоровье - " + hero.health;
 
     }
   }
 
   function updateStatsEnemy(yourBadGuy) {
     document.getElementById("enemyStats").style.display = "block";
-    document.getElementById("nameEnemy").innerHTML = "name - " + yourBadGuy.name;
-    document.getElementById("damageEnemy").innerHTML = "damage - " + yourBadGuy.damage;
-    document.getElementById("armorEnemy").innerHTML = "armor - " + yourBadGuy.armor;
+    document.getElementById("nameEnemy").innerHTML = "имя - " + yourBadGuy.name;
+    document.getElementById("damageEnemy").innerHTML = "урон - " + yourBadGuy.damage;
+    document.getElementById("armorEnemy").innerHTML = "броня - " + yourBadGuy.armor;
     
-    document.getElementById("healthEnemy").innerHTML = "health - " + yourBadGuy.health;
+    document.getElementById("healthEnemy").innerHTML = "здоровье - " + yourBadGuy.health;
   }
     
 
@@ -64,7 +64,7 @@ window.onload = function () {
     let confirmBadGuy = confirm(
       "Вы встретили " +
       slime.name +
-      " Вступить в сражение? Или спастись бегством?"
+      ". Вступить в сражение? Или спастись бегством?"
     );
 
     if (confirmBadGuy) {
@@ -75,6 +75,7 @@ window.onload = function () {
       updateStatsEnemy(yourBadGuy)
     } else {
       hero.health -= yourBadGuy.damage;
+      alert("А в бой тогда чего полез?.. " + slime.name + " осуждающе посмотрел на вас.");
       updateStats();
     }
   }
@@ -93,6 +94,19 @@ window.onload = function () {
       document.getElementById("go-battle").style.display = "block";
       yourBadGuy.health = 100;
       hero.damage += 5;
+        
+      let confirmPotion = confirm(
+      "Вы устали. Хотите выпить зелье?"
+      );
+      if (confirmPotion) {
+          if (hero.health < 70) {
+              hero.health = 70 
+          } else {
+              alert("Вы не настолько сильно устали... Это на чёрный день.")
+          }
+      } else {
+          alert("А зачем с собой брал?..")
+      }
       updateStats();
 
       return true

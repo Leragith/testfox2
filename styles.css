@@ -27,9 +27,9 @@ body{
     background-size: 3200px;
     background-position: 0px -2900px;
     position: absolute;
-    top: 250px;
+    top: 227px;
     left: auto;
-    margin-left: 150px;
+    margin-left: 25px;
     transition: transform 1s ;
 }
 #heroStats{
